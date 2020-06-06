@@ -1,6 +1,7 @@
 @extends('layout.master')
 
 @section('body')
+
   <x-hero />
 
   <div class="container">
@@ -22,4 +23,5 @@
   <x-our-partners />
 
   <x-cookies-alert />
+
 @endsection
