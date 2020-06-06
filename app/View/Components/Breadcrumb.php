@@ -4,18 +4,23 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class OurLatestWorks extends Component
+class Breadcrumb extends Component
 {
-  public $grey;
+
+  public $title;
+
+  public $breadcrumbs;
 
   /**
    * Create a new component instance.
    *
-   * @param bool $grey
+   * @param $title
+   * @param $breadcrumbs
    */
-    public function __construct(Bool $grey = false)
+    public function __construct(String $title, Array $breadcrumbs)
     {
-        $this->grey = $grey;
+        $this->title = $title;
+        $this->breadcrumbs = $breadcrumbs;
     }
 
     /**
@@ -25,6 +30,6 @@ class OurLatestWorks extends Component
      */
     public function render()
     {
-        return view('components.our-latest-works');
+        return view('components.breadcrumb');
     }
 }

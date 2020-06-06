@@ -15,4 +15,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('landing');
-});
+})->name('landing');
+
+Route::get('contact-us', function () {
+  return view('contact-us');
+})->name('contact_us');
